@@ -1,0 +1,893 @@
+@font-face {
+    font-family: "Butler_Ultra_Light";
+    src: url("font/Butler_Ultra_Light.otf");
+
+}
+
+@font-face {
+
+    font-family: "ITC Eras Book";
+    src: url("font/ITC\ Eras\ Book.ttf");
+
+}
+
+@font-face {
+
+    font-family: "Butler_Medium";
+    src: url("font/Butler_Medium.otf");
+
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.mobile-navigation {
+    display: none;
+
+
+}
+
+
+.header {
+    height: 100vh;
+
+
+}
+
+
+.trapez {
+
+
+    position: absolute;
+    background-color: #eaede8;
+    width: 100%;
+    height: 300px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 85%, 0 60%, 0 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 85%, 0 60%, 0 0);
+    z-index: -5;
+}
+
+.navigation {
+    position: fixed;
+    text-align: center;
+    z-index: 500;
+    background: transparent;
+    padding: 18px;
+    width: 100vw;
+    -webkit-transition: all ease-out .5s;
+    -moz-transition: all ease-out .5s;
+    -o-transition: all ease-out .5s;
+    transition: all ease-out .5s;
+}
+
+.woron_nav {
+    visibility: hidden;
+
+}
+
+.woron_nav-active {
+    visibility: visible;
+
+}
+
+.active {
+    background-color: #eaede8;
+    width: 100vw;
+
+}
+
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin-top: 20px;
+
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+    font-family: "Butler_Ultra_Light";
+    font-size: 20px;
+    color: #707070;
+    padding: 95px;
+
+}
+
+
+h1 {
+
+    position: absolute;
+    font-family: "Butler_Ultra_Light";
+    font-size: 50px;
+    color: #707070;
+    right: 43%;
+    top: 10%;
+
+}
+
+
+h2 {
+
+    position: absolute;
+    font-family: "Butler_Ultra_Light";
+    font-size: 30px;
+    color: #707070;
+    right: 46%;
+    top: 22%;
+
+
+}
+
+
+.videobox {
+    display: block;
+    height: 100%;
+    left: 47%;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+
+}
+
+
+
+.banner {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    z-index: 2;
+    left: 18%;
+    top: 57%;
+
+
+}
+
+.date-venue {
+    position: absolute;
+    font-family: "ITC Eras Book";
+    text-align: right;
+    font-size: 24px;
+    top: 41%;
+    left: 23%;
+
+
+}
+
+
+.devider {
+    margin-top: 4em;
+    border-top: 0.5px #707070;
+    top: 57%;
+
+
+}
+
+/*popup form*/
+.button {
+    position: relative;
+    left: 39%;
+    font-family: "ITC Eras Book";
+    font-size: 35px;
+    background-color: #E3D8CF;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    margin-top: 2em;
+    cursor: pointer;
+    outline: 0;
+
+}
+
+/*
+    Modal Style
+    */
+.modal-shade {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    display: none;
+    z-index: 9;
+}
+
+.modal-window {
+    height: 560px;
+    width: 800px;
+    background-image: url("images/ticket.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 2px;
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 2px #111;
+    z-index: 10000;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    color: #555;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #111;
+}
+
+.email-input {
+    height: 4em;
+    width: 60%;
+    object-position: center;
+    left: 21%;
+    top: 40%;
+    position: relative;
+    outline-color: #d6dbd2;
+}
+
+.submitbutton {
+    height: 4em;
+    width: 20%;
+    right: 20%;
+    top: 52%;
+    position: relative;
+    font-family: "ITC Eras Book";
+    font-size: 14px;
+    background-color: #eaede8;
+    border: none;
+    outline: none;
+
+}
+
+
+
+
+
+/*SECTION PROGRAM*/
+
+.agenda {
+    position: relative;
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    z-index: -200;
+
+
+
+}
+
+#line {
+    z-index: 200;
+    position: absolute;
+    left: 13%;
+    top: 141%;
+    width: 500px;
+    height: 750px;
+
+}
+
+.path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 4s linear alternate infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 2000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* SECTION SUSTAINABILITY */
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 2fr 2fr 1.9fr 0.3fr 0.3fr;
+    grid-template-rows: 0.7fr 1.1fr 1.1fr 1.1fr;
+    grid-template-areas: ". DECRIPTION DECRIPTION DECRIPTION DECRIPTION DECRIPTION ."". . picture1 text2 picture3 . ."". . text1 picture2 text3 . ."". . . . . . .";
+}
+
+
+
+.DECRIPTION {
+    grid-area: DECRIPTION;
+    font-family: "ITC Eras Book";
+    font-size: 18px;
+    text-align: center;
+    padding-top: 3em;
+    line-height: 1.5;
+    color: #707070;
+
+
+}
+
+.picture1 {
+    grid-area: picture1;
+    background-image: url("images/icon1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.picture2 {
+    grid-area: picture2;
+    background-image: url("images/icon2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+.picture3 {
+    grid-area: picture3;
+    background-image: url("images/icon3.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text1 {
+    grid-area: text1;
+    font-family: "Butler_Ultra_Light";
+    font-size: 22px;
+    text-align: center;
+    margin-top: 130px;
+
+}
+
+.text2 {
+    grid-area: text2;
+    font-family: "Butler_Ultra_Light";
+    font-size: 22px;
+    text-align: center;
+}
+
+.text3 {
+    grid-area: text3;
+    font-family: "Butler_Ultra_Light";
+    font-size: 22px;
+    text-align: center;
+    margin-top: 130px;
+
+}
+
+
+/*SLIDESHOW*/
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: #eaede8;
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+    background-color: #eaede8;
+}
+
+/* Add an italic font style to all quotes */
+q {
+    font-family: "Butler_Ultra_Light";
+    font-size: 20px;
+
+
+}
+
+/* Add a blue color to the author */
+.author {
+    color: #3d3d3d;
+    font-family: "Butler_Ultra_Light";
+    font-size: 16px;
+}
+
+.slideshow-image {
+    width: 250px;
+
+}
+
+
+
+/*SPONSORS*/
+
+.sponsors {
+    height: 30vh;
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sponsor1 sponsor2 sponsor3";
+}
+
+.sponsor1 {
+    grid-area: sponsor1;
+    background-image: url("images/logo-coffee.jpg");
+    background-repeat: no-repeat;
+    margin-left: 13em;
+    margin-bottom: 3em;
+
+}
+
+.sponsor2 {
+    grid-area: sponsor2;
+    background-image: url("images/resres-logo.png");
+    background-repeat: no-repeat;
+    margin-left: 10em;
+    margin-bottom: 3em;
+
+}
+
+.sponsor3 {
+    grid-area: sponsor3;
+    background-image: url("images/logo-sprout.png");
+    background-repeat: no-repeat;
+    margin-left: 1em;
+    margin-bottom: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #707070;
+    bottom: 0;
+
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr;
+    grid-template-rows: 0.7fr 1.3fr;
+    grid-template-areas: ". SoMe LOGO"". footer-text LOGO";
+}
+
+.SoMe {
+    grid-area: SoMe;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+
+}
+
+.SoMe img {
+    width: 35px;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SoMe a {
+    border-style: none;
+    text-decoration: none;
+}
+
+
+
+.footer-text {
+    grid-area: footer-text;
+    font-family: "ITC Eras Book";
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.LOGO {
+    grid-area: LOGO;
+}
+
+.LOGO img {
+    width: 400px;
+}
+
+.footer-devider {
+    margin-bottom: 3em;
+}
+
+.bottom-text {
+    font-size: 12px;
+    margin-top: 3em;
+}
+
+
+/*MOBILE VERSION*/
+
+@media screen and (max-width: 580px) {
+
+    h1 {
+
+        right: 25%;
+
+
+    }
+
+    h2 {
+
+
+        right: 35%;
+
+    }
+
+    .navigation {
+
+
+        display: none;
+
+
+    }
+
+    /*BURGER NAVIGATION*/
+
+    .mobile-navigation {
+        display: block;
+        font-family: "Butler_Ultra_Light";
+        text-align: center;
+        line-height: 55px;
+        font-size: 20px;
+
+
+
+    }
+
+    .mobile-navigation li {
+        list-style-type: none;
+
+
+    }
+
+    .mobile-navigation a {
+        text-decoration: none;
+        color: #707070;
+
+    }
+
+    .burger-button {
+        margin-top: 20px;
+        z-index: 900;
+        position: absolute;
+        right: 20px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        cursor: pointer
+    }
+
+    .burger-button span {
+        width: 100%;
+        transition: .5s all cubic-bezier(.175, .885, .32, 1.275);
+        height: 2px;
+        background: #707070;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    .burger-button span:nth-child(1) {
+        top: 0
+    }
+
+    .burger-button span:nth-child(2) {
+        top: 44%;
+        width: 60%
+    }
+
+    .burger-button span:nth-child(3) {
+        bottom: 0
+    }
+
+    .burger-button.active span:nth-child(1) {
+        top: 20px;
+        transform-origin: left;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    .burger-button.active span:nth-child(2) {
+        width: 0%
+    }
+
+
+    .burger-button.active span:nth-child(3) {
+        bottom: 20px;
+        transform-origin: left;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+
+    .container-mobile,
+    .mob-nav-text {
+        width: 100vw;
+        position: fixed;
+        background-color: #eaede8;
+        z-index: 200;
+    }
+
+    .mobile-navigation {
+        display: none
+    }
+
+    .show {
+        display: block
+    }
+
+    .videobox {
+        display: block;
+        position: relative;
+        left: 0;
+    }
+
+
+
+    .banner {
+        z-index: -2;
+        position: absolute;
+        width: 90vw;
+        left: 5%;
+
+    }
+
+    .date-venue {
+        position: absolute;
+        font-family: "ITC Eras Book";
+        text-align: center;
+        font-size: 22px;
+        left: 15%;
+
+
+
+    }
+
+    .button {
+        position: relative;
+        left: 20%;
+        font-family: "ITC Eras Book";
+        font-size: 25px;
+
+
+    }
+
+    .modal-window {
+        height: 360px;
+        width: 100vw;
+
+    }
+
+    .email-input {
+        height: 3em;
+        width: 60%;
+        top: 35%;
+
+    }
+
+    .submitbutton {
+        height: 3em;
+        font-size: 12px;
+
+
+    }
+
+    #line {
+        display: none;
+
+
+    }
+
+    .path {
+        display: none;
+
+
+    }
+
+
+    .agenda {
+        width: 100vw;
+        z-index: -2;
+
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+        grid-template-areas: "DECRIPTION""picture1""text1""picture2""text2""picture3""text3";
+    }
+
+    .picture1 {
+        grid-area: picture1;
+    }
+
+    .text1 {
+        grid-area: text1;
+    }
+
+    .picture2 {
+        grid-area: picture2;
+    }
+
+    .text2 {
+        grid-area: text2;
+    }
+
+    .picture3 {
+        grid-area: picture3;
+    }
+
+    .text3 {
+        grid-area: text3;
+    }
+
+    .DECRIPTION {
+        grid-area: DECRIPTION;
+    }
+
+
+    .DECRIPTION {
+        font-size: 13px;
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+
+    }
+
+    .sponsors {
+        margin-top: 2em;
+        display: grid;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "sponsor1""sponsor2""sponsor3";
+
+    }
+
+    .sponsor1 {
+        grid-area: sponsor1;
+        background-position: center;
+        margin-left: 0;
+    }
+
+    .sponsor2 {
+        grid-area: sponsor2;
+        margin-right: 8em;
+        background-position: center;
+        background-size: contain;
+
+
+    }
+
+    .sponsor3 {
+        grid-area: sponsor3;
+        background-position: center;
+
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr 0.2fr;
+        grid-template-areas: "SoMe""footer-text""LOGO";
+    }
+
+    .SoMe {
+        grid-area: SoMe;
+
+    }
+
+    .LOGO {
+        grid-area: LOGO;
+    }
+
+    .footer-text {
+
+        grid-area: footer-text;
+    }
+
+    .bottom-text {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 3em;
+    }
+
+
+}
