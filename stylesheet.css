@@ -62,7 +62,7 @@ body {
     text-align: center;
     z-index: 500;
     background: transparent;
-    padding: 18px;
+    padding: 1.5em;
     width: 100vw;
     -webkit-transition: all ease-out .5s;
     -moz-transition: all ease-out .5s;
@@ -90,7 +90,7 @@ body {
 nav li {
     display: inline-block;
     list-style-type: none;
-    margin-top: 20px;
+   
 
 
 }
@@ -102,7 +102,7 @@ nav a {
     font-family: "Butler_Ultra_Light";
     font-size: 20px;
     color: #707070;
-    padding: 95px;
+    padding: 4em;
 
 }
 
@@ -516,14 +516,6 @@ q {
 }
 
 
-
-
-
-
-
-
-
-
 /*FOOTER*/
 
 footer {
@@ -585,6 +577,54 @@ footer {
     font-size: 12px;
     margin-top: 3em;
 }
+
+/*LESS THAN 1400px*/
+
+@media screen and (max-width: 1400px) {
+nav a {
+    
+    padding: 3em;
+}
+
+.videobox {
+    display: block;
+    height: 100%;
+    left: 47%;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+
+}
+
+
+
+.banner {
+  
+    width: 450px;
+    left: 15%;
+    top: 57%;
+
+
+}
+
+.date-venue {
+    font-size: 22px;
+    top: 41%;
+    left: 20%;
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
 
 
 /*MOBILE VERSION*/
